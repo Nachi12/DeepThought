@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Technical Project Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="top-bar">
+  <div class="logo">DEEP <span>THOUGHT</span></div>
+ <button class="submit-btn" id="submitTaskBtn">Submit task</button></header>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- LEFT PANEL -->
+ <aside class="left-panel collapsed" id="leftPanel">
+
+  <!-- TOP BAR -->
+  <div class="journey-header">
+    <span class="journey-title">Journey Board</span>
+    <button class="arrow-btn" id="toggleBtn">⟵</button>
+  </div>
+
+  <!-- STEP INDICATOR -->
+  <div class="step">1</div>
+
+  <!-- JOURNEY LIST -->
+  <ul class="journey-list">
+    <li><strong>Explore the world of management</strong></li>
+    <li>Technical Project Management</li>
+    <li>Threadbuild</li>
+    <li>Structure your pointers</li>
+    <li>4SA Method</li>
+  </ul>
+
+</aside>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- INTRO -->
+    <section class="intro">
+      <h1 id="head">Technical Project Management</h1>
+      <h2>Explore the world of management</h2>
+      <p>
+        As a project manager, you play an important reole in leading a project through initiation, planning, execution, monitoring, controlling and <p></p>completion. How? Do you want to manage each and every step of your life?</p>
+      </p>
+    </section>
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <!-- VIDEO CARD -->
+      <div class="card">
+        <div class="card-header">Technical Project Management</div>
+        <div class="card-body">
+          <p class="desc">
+            <b>Description:</b> Story of Alignment Scope of Agility Specific Accountable Staggering Approach
+          </p>
+          <div class="video-box">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/gdO3sGd-Shg?si=IhvyTbSikgCdJVgP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- THREADBUILD -->
+      <div class="card">
+        <div class="card-header">Threadbuild</div>
+        <div class="card-body">
+          <p class="desc">
+            <b>Description:</b> Watch the video and build threads while watching
+          </p>
+
+          <div class="thread">
+            <h4>Thread A</h4>
+
+            <div id="subThreads">
+              <div class="sub-thread">
+                <textarea placeholder="Sub thread 1"></textarea>
+                <textarea placeholder="Sub Interpretation 1"></textarea>
+                <div class="actions">
+                  <select id="drp-dwn"><option>Select Categ</option></select>
+                  <select id="drp-dwn"><option>Select Process</option></select>
+                </div>
+              </div>
+            </div>
+
+            <button class="add-btn" onclick="addSubThread()">+ Sub-thread</button>
+            <textarea class="summary" placeholder="Summary for Thread A"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- STRUCTURE POINTERS -->
+      <div class="card">
+        <div class="card-header">Structure your Pointers</div>
+        <div class="card-body">
+          <p class="desc">
+            <b>Description:</b> Write a 300–400 word article from your thread
+          </p>
+          <input type="text" class="input" placeholder="Title" />
+          <textarea class="editor" placeholder="Write your content here..."></textarea>
+        </div>
+      </div>
+
+      <!-- 4SA METHOD -->
+     <div class="card">
+
+  <!-- CARD HEADER -->
+  <div class="card-header">
+    4SA Method
+    <span class="info-icon">i</span>
+  </div>
+
+  <!-- CARD BODY -->
+  <div class="card-body">
+
+    <!-- DESCRIPTION -->
+    <p class="desc">
+      <b>Description :</b> To Explore more read more
+    </p>
+
+    <!-- ACCORDION ITEM -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>Introduction</span>
+        <span class="arrow">⌃</span>
+      </div>
+      <div class="accordion-content">
+        <p>The 4SA Method, How to bring an idea into progress?</p>
+        <span class="see-more">See More</span>
+      </div>
+    </div>
+
+    <!-- ACCORDION ITEM -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>Thread A</span>
+        <span class="arrow">⌃</span>
+      </div>
+      <div class="accordion-content">
+        <p>
+          How are you going to develop your strategy?
+          Which method are you going to use to develop a strategy?
+          What if the project is lengthy?
+        </p>
+        <span class="see-more">See More</span>
+      </div>
+    </div>
+
+    <!-- ACCORDION ITEM -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>Example 1</span>
+        <span class="arrow">⌃</span>
+      </div>
+      <div class="accordion-content">
+        <p>You have a concept, how will you put it into progress?</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </div>
+  </main>
+
+  <!-- NOTICE BOARD -->
+<aside class="notice-board collapsed" id="noticeBoard">
+  <span class="notice-text">Notice</span>
+</aside>
+
+
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating">
+  <button>?</button>
+  <button>👥</button>
+  <button>📅</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

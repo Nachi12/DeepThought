@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f8fb;
+}
+#head{
+  color: #1e63ff;
+  font-weight: 2000;
+}
+/* ================= HEADER ================= */
+.top-bar {
+  background: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo span {
+  color: #1e63ff;
+}
+
+.submit-btn {
+  background: #1e63ff;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= LAYOUT ================= */
+.layout {
+  display: flex;
+}
+
+/* ================= LEFT PANEL ================= */
+/* LEFT PANEL BASE */
+.left-panel {
+  height: calc(100vh - 80px);
+  background: #ffffff;
+  margin: 20px 10px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+/* STATES */
+.left-panel.collapsed {
+  width: 70px;
+}
+
+.left-panel.expanded {
+  width: 260px;
+}
+
+/* HEADER */
+.journey-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+}
+
+.journey-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ARROW BUTTON */
+.arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ROTATE WHEN COLLAPSED */
+.left-panel.collapsed .journey-title,
+.left-panel.collapsed .journey-list {
+  display: none;
+}
+
+/* STEP */
+.step {
+  margin: 20px auto;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #1e63ff;
+  color: #1e63ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* JOURNEY LIST */
+.journey-list {
+  list-style: disc;
+  padding: 0 20px 20px 40px;
+  font-size: 14px;
+}
+
+.journey-list li {
+  margin-bottom: 8px;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  background: #eef2f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-header.clickable {
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.desc {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ================= VIDEO ================= */
+.video-box iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+/* ================= THREAD ================= */
+.thread h4 {
+  margin: 10px 0;
+}
+
+.sub-thread textarea {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  background: #1e63ff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.summary {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+/* ================= INPUTS ================= */
+.input,
+.editor {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* ================= 4SA ================= */
+.hidden {
+  display: none;
+}
+
+/* ================= NOTICE BOARD ================= */
+/* NOTICE BOARD */
+.notice-board {
+  position: fixed;
+  right: 0;
+  top: 120px;
+  height: 50px;
+  width: 120px;
+  background: #000;
+  color: #fff;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: -3px 4px 10px rgba(0,0,0,0.3);
+  transition: width 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.notice-board .notice-text {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* collapsed state */
+.notice-board.collapsed {
+  width: 120px;
+  height: 50px;
+}
+
+/* expanded state */
+.notice-board.expanded {
+  width: 300px;
+  height: 220px;
+  padding: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+/* ================= FLOATING BUTTONS ================= */
+.floating {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating button {
+  background: #1e63ff;
+  color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#drp-dwn{
+    padding: 10px;
+    border-radius:5px;
+    border: none;
+    
+}
+
+
+
+/* 4SA CARD HEADER */
+.card-header {
+  background: #000;
+  color: #fff;
+  padding: 14px 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* INFO ICON */
+.info-icon {
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ACCORDION */
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 12px 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+}
+
+.accordion-header.active {
+  border: 2px solid #1e63ff;
+  border-radius: 6px;
+}
+
+.accordion-content {
+  padding: 12px 14px;
+  display: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+.arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* SEE MORE */
+.see-more {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+  text-align: righ
+}
+
